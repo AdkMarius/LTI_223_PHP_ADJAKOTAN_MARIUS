@@ -1,10 +1,7 @@
 <?php
-    if (!isset($_SESSION))
-        session_start();
 
     $title = "Ajout des documents - Livres Numériques";
     $description = "Page dédié à l'administrateur pour l'ajout des documents !";
-    $linkFirst = "rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'";
     $linkSecond = "rel='stylesheet' href='../../../assets/css/add-document.css'";
     $linkThird = "rel='stylesheet' href='../../../assets/css/top-navbar-admin.css'";
     $linkFourth = "rel='stylesheet' href='../../../assets/css/vertical-nav.css'";
@@ -89,7 +86,6 @@
         </div>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <?php $content = ob_get_clean(); ?>
 
-<?php require('layout.php') ?>
+<?php require('../layout.php') ?>

@@ -1,0 +1,5 @@
+# Interdire l'accès direct aux fichiers de contrôleurs et de modèles
+<FilesMatch "\.(php|inc|sql)$">
+  Order deny,allow
+  Deny from all
+</FilesMatch>

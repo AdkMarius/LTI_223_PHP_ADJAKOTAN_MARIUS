@@ -1,0 +1,262 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: Montserrat, "sans-serif";
+  font-weight: normal;
+  color: #000;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-family: Montserrat, "sans-serif";
+  font-weight: bold;
+  color: #000;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: Montserrat, "sans-serif";
+  font-weight: bold;
+  color: black;
+  font-size: 1.25em;
+}
+
+input, label, textarea, button {
+  font-family: Montserrat, "sans-serif";
+  font-size: 0.8em;
+  line-height: 0.8em;
+}
+
+.border-rounded {
+  border: 0.1rem solid #E7ECF4;
+  border-radius: 5px;
+}
+
+.btn-rounded {
+  padding: 0.5rem;
+  border: 0.1rem solid #3A54AA;
+  color: #fff;
+  cursor: pointer;
+  background-color: #3A54AA;
+  border-radius: 10px;
+}
+.btn-rounded:hover {
+  background-color: #202e5e;
+  color: #fff;
+}
+.btn-rounded--full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-wide {
+  padding: 0.5rem;
+  border: 0.1rem solid #3A54AA;
+  color: #fff;
+  cursor: pointer;
+  background-color: #3A54AA;
+  width: 100%;
+}
+.btn-wide:hover {
+  background-color: #202e5e;
+  color: #fff;
+}
+.btn-wide--full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-medium {
+  padding: 0.5rem;
+  border: 0.1rem solid #3A54AA;
+  color: #fff;
+  cursor: pointer;
+  background-color: #3A54AA;
+  width: 30%;
+  margin-left: 20px;
+  height: 40px;
+}
+.btn-medium:hover {
+  background-color: #202e5e;
+  color: #fff;
+}
+.btn-medium--full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-mg {
+  margin-top: 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.navbar__menu {
+  text-decoration: none;
+  color: #dad6d6;
+  font-weight: lighter;
+  margin: 0 28px;
+  cursor: pointer;
+  transition: 0.6;
+}
+.navbar__menu__active {
+  color: white;
+  font-weight: bold;
+}
+.navbar__menu:hover {
+  border-bottom: 2px solid white;
+}
+
+.form {
+  padding-bottom: 0.5rem;
+}
+.form__field {
+  margin-bottom: 30px;
+}
+.form__field label {
+  display: block;
+  padding-top: 0.5rem;
+}
+.form__field input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 0.1rem solid #BBC4D9;
+  padding: 0.5rem;
+  background-color: #E7ECF4;
+  color: #000;
+  outline: none;
+  margin-top: 10px;
+}
+.form__field input :focus-visible {
+  border-radius: 5px;
+  border: 0.1rem solid #3A54AA;
+}
+.form__field textarea {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 0.1rem solid #BBC4D9;
+  outline: none;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  background-color: #E7ECF4;
+}
+
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: #3A54AA;
+}
+.header .navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__content {
+  width: 40px;
+}
+
+.form {
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+.form__field {
+  display: flex;
+  width: 40%;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+}
+.form__field input {
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  border: 0.1rem solid #BBC4D9;
+  padding: 0.5rem;
+  background-color: #E7ECF4;
+  color: #000;
+  outline: none;
+  margin-top: 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container-custom {
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.custom-row {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.custom-col-4 {
+  width: 25%;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+}
+
+.custom-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.custom-card:hover {
+  box-shadow: 10px 8px 40px -10px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 10px 8px 40px -10px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 10px 8px 40px -10px rgba(0, 0, 0, 0.43);
+}
+
+.custom-card-img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.custom-card-title {
+  padding: 12px;
+}
+
+body {
+  background-color: #f4f4f4 !important;
+}
+
+/*# sourceMappingURL=accueil-user.css.map */

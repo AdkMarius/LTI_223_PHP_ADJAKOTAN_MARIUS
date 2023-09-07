@@ -63,6 +63,7 @@ class AddPropertiesDoc
         {
             $isOkay = false;
 
+            /*
             $query = 'SELECT idAuthor FROM authors WHERE nameAuthor = :nameAuthor';
             $statement = $this->connection->getConnection()->prepare($query);
             $statement->execute([
@@ -75,19 +76,18 @@ class AddPropertiesDoc
             {
                 //get idAuthor is Author exist
                 $idAuthor = $row['idAuthor'];
-            }
-            else
-            {
-                $query = 'INSERT INTO authors (nameAuthor, firstName) VALUES (:nameAuthor, :firstName)';
-                $statement = $this->connection->getConnection()->prepare($query);
-                $statement->execute([
-                    "nameAuthor" => $propertiesDoc->authorName[$i],
-                    "firstName" => $propertiesDoc->authorFirstName[$i]
-                ]) or die(print_r($this->connection->getConnection()->errorInfo()));
+            }*/
 
-                // get idAuthor after insert author
-                $idAuthor = $this->connection->getConnection()->lastInsertId();
-            }
+
+            $query = 'INSERT INTO authors (nameAuthor, firstName) VALUES (:nameAuthor, :firstName)';
+            $statement = $this->connection->getConnection()->prepare($query);
+            $statement->execute([
+                "nameAuthor" => $propertiesDoc->authorName[$i],
+                "firstName" => $propertiesDoc->authorFirstName[$i]
+            ]) or die(print_r($this->connection->getConnection()->errorInfo()));
+
+            // get idAuthor after insert author
+            $idAuthor = $this->connection->getConnection()->lastInsertId();
 
             $query = 'INSERT INTO documentsauthors(idDoc, idAuthor) VALUES (:idDoc, :idAuthor)';
             $statement = $this->connection->getConnection()->prepare($query);

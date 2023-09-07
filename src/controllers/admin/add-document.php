@@ -10,7 +10,7 @@ use Application\Model\Admin\AddDocument\AddPropertiesDoc;
 
 $pathFile = [];
 
-function validFile(string $nameOfFile, int $value) : bool
+function validFile(string $nameOfFile, int $value, string $chaine) : bool
 {
     global $pathFile;
 
@@ -23,9 +23,12 @@ function validFile(string $nameOfFile, int $value) : bool
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         // Check if file already exists
-        if (file_exists($target_file)) {
-            $uploadOk = 0;
-            throw new Exception("Sorry, file already exists.");
+        if ($chaine == 'add')
+        {
+            if (file_exists($target_file)) {
+                $uploadOk = 0;
+                throw new Exception("Sorry, file already exists.");
+            }
         }
 
         // Check file size and format
@@ -91,7 +94,7 @@ function validateFormDoc()
             $infoDocument[$item] = test_input($value);
     }
 
-    if (validFile('fileToUpload', 1) && validFile('fileImage', 0))
+    if (validFile('fileToUpload', 1, 'add') && validFile('fileImage', 0, 'add'))
         $valid = 1;
 
     if ($valid) {
@@ -107,4 +110,13 @@ function validateFormDoc()
             header('Location: index.php?action=viewDoc');
         }
     }
+}
+
+function logout()
+{
+    session_unset();
+
+    session_destroy();
+
+    header('Location: src/views/admin/admin-login.php');
 }

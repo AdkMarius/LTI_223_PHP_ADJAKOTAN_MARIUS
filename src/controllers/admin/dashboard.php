@@ -1,8 +1,8 @@
 <?php
 
-//start section if is not exist
 if (!isset($_SESSION))
-    session_start();
+        session_start();
+
 
 require_once('src/models/admin/dashboard.php');
 

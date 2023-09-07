@@ -79,6 +79,25 @@ input, label, textarea, button {
   margin: 0 auto;
 }
 
+.btn-medium {
+  padding: 0.5rem;
+  border: 0.1rem solid #3A54AA;
+  color: #fff;
+  cursor: pointer;
+  background-color: #3A54AA;
+  width: 30%;
+  margin-left: 20px;
+  height: 40px;
+}
+.btn-medium:hover {
+  background-color: #202e5e;
+  color: #fff;
+}
+.btn-medium--full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .btn-mg {
   margin-top: 30px;
 }

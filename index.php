@@ -4,6 +4,7 @@ require_once('src/controllers/admin/admin-login.php');
 require_once('src/controllers/admin/add-document.php');
 require_once('src/controllers/admin/dashboard.php');
 require_once('src/controllers/admin/view-document.php');
+require_once('src/controllers/user/accueil-user.php');
 
 try {
     if (!empty($_GET['action']))
@@ -38,11 +39,43 @@ try {
         {
             receiveData();
         }
+        else if ($_GET['action'] == 'user' && isset($_GET['goal']))
+        {
+            if ($_GET['goal'] == 'search' && isset($_POST))
+            {
+                searchInfos();
+            }
+        }
+        else if ($_GET['action'] == 'user' && !isset($_GET['goal']))
+        {
+            displayInfos();
+        }
+        else if ($_GET['action'] == 'delete' && isset($_GET['id']))
+        {
+            deleteInformation($_GET['id']);
+        }
+        else if ($_GET['action'] == 'update' && isset($_GET['id']))
+        {
+            redirect($_GET['id']);
+        }
+        else if ($_GET['action'] == 'updateRecord' && isset($_GET['id']))
+        {
+            if (isset($_POST))
+            {
+                updateRecord($_GET['id'], $_POST);
+            }
+        }
+        else if ($_GET['action'] == 'logout')
+        {
+            logout();
+        }
         else
             throw new Exception('Valeur pour action incorrecte !');
     }
     else
-        throw new Exception('Je dois inclure le fichier par défaut vers l\'accuiel de user');
+    {
+        displayInfos();
+    }
 } catch (Exception $e) {
     echo 'Error : ' . $e->getMessage();
 }

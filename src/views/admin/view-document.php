@@ -8,8 +8,8 @@ if (!isset($_SESSION))
     $linkFirst = "rel='stylesheet' href='./assets/css/view-document.css'";
     $linkSecond = "rel='stylesheet' href='./assets/css/top-navbar-admin.css'";
     $linkThird = "rel='stylesheet' href='./assets/css/vertical-nav.css'";
-    $script = "src='./assets/js/view-document.js' defer";
     $scriptFontAwesome = 'src="https://kit.fontawesome.com/0519f73e88.js" crossorigin="anonymous"';
+    $script = 'src=./assets/js/view-document.js';
 
     require_once ('src/controllers/admin/view-document.php');
 ?>
@@ -28,15 +28,18 @@ if (!isset($_SESSION))
             <h1>Consultez ici la liste de tous les livres numériques</h1>
 
             <div class="main__table">
-                <table class="table">
+                <table class="table--custom">
                     <tr>
                         <th>Nombre</th>
+                        <th>ID</th>
                         <th>Thèmes</th>
                         <th>Titre</th>
                         <th>Résumé du Livre</th>
                         <th>Auteurs</th>
                         <th>Mots Clés</th>
                         <th>Date d'Insertion</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
                     </tr>
 
                     <?php
@@ -46,8 +49,14 @@ if (!isset($_SESSION))
                     <tr>
                         <td><?= $i ?></td>
                         <?php foreach ($document as $col) : ?>
-                            <td><?= $col ?></td>
+                            <td class="row-custom"><?= $col ?></td>
                         <?php endforeach; ?>
+                        <td>
+                            <a id="update" href="./index.php?action=update&id=<?= urlencode($document['idDoc']) ?>">Modifier</a>
+                        </td>
+                        <td>
+                            <a id="delete" href="./index.php?action=delete&id=<?= urlencode($document['idDoc']) ?>">Supprimer</a>
+                        </td>
                     </tr>
                     <?php
                         $i++;
@@ -62,4 +71,4 @@ if (!isset($_SESSION))
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('layout.php') ?>
+<?php require('./src/views/layout.php') ?>

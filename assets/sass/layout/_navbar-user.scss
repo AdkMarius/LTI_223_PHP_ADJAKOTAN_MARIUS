@@ -1,0 +1,34 @@
+@use '../base/base';
+@use '../base/typography';
+@use '../utils/variables';
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  &__logo{
+
+  }
+  &__content{
+
+  }
+
+  &__menu{
+    text-decoration: none;
+    color: #dad6d6;
+    font-weight: lighter;
+    margin: 0 28px;
+    cursor: pointer;
+    transition: 0.6;
+    &__active{
+      color: white;
+      font-weight: bold;
+    }
+
+    &:hover{
+      border-bottom: 2px solid white;
+    }
+  }
+}
