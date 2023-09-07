@@ -1,0 +1,23 @@
+.main {
+  width: 100vw;
+  display: flex;
+  height: calc(100vh - 40px);
+
+  &__sidebar {
+    width: 15%;
+    height: 100%;
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+    width: 85%;
+    justify-content: center;
+    display: flex;
+    padding-top: 65px;
+
+    &--child {
+      width: 75%;
+    }
+  }
+}

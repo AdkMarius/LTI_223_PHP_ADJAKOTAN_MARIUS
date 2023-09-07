@@ -1,0 +1,26 @@
+[
+  {
+    "picture": "../../../assets/images/Ajout-Documents.jpg",
+    "title": "Ajoutez des documents",
+    "text": "Cet onglet se retrouve dans le menu à droite et vous permet d'ajouter un nouveau document sur le site. Vous remplirez un formulaire à cet effet !",
+    "link": "/src/views/admin/add-document.php",
+    "altText": "Ajout des documents sur le site Livres Numériques",
+    "linkText": "Ajoutez des documents"
+  },
+  {
+    "picture": "../../../assets/images/Listes-Auteurs.jpg",
+    "title": "Consultez ici la liste des auteurs des documents",
+    "text": "Sur la page, vous verrez la liste de tous les documents enrégistrés et tous les informations liées à chaque document. Vous pourrez aussi modifier et supprimer un document si vous le voulez.",
+    "link": "/src/views/admin/add-document.php",
+    "altText": "Listes des auteurs du site Livres Numériques",
+    "linkText": "Voir la liste des auteurs"
+  },
+  {
+    "picture": "../../../assets/images/Themes-Documents.jpg",
+    "title": "Consultez la liste des différentes thématiques",
+    "text": "Vous verrez dans cet onglet tous les différents thèmes liés aux documents. Vous pouvez aussi trouver le lien dans le menu de droite",
+    "link": "/src/views/admin/add-document.php",
+    "altText": "Listes des thèmes de document du site Livres Numériques",
+    "linkText": "Voir les différents thèmes"
+  }
+]

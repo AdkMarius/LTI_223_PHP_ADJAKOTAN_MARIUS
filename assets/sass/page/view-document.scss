@@ -1,0 +1,13 @@
+@use '../base/base';
+@use '../base/typography';
+@use '../utils/variables';
+@use '../layout/design-page-admin';
+
+.main__table {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #897f7f;
+}

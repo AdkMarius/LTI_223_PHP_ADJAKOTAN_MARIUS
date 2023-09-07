@@ -1,0 +1,32 @@
+@use '../utils/variables';
+
+p
+{
+  font-family: Montserrat, 'sans-serif';
+  font-weight: normal;
+  color: variables.$black-color;
+  font-size: 0.8em;
+}
+
+h1
+{
+  font-family: Montserrat, 'sans-serif';
+  font-weight: bold;
+  color: variables.$black-color;
+  font-size: 2em;
+}
+
+h2
+{
+  font-family: Montserrat, 'sans-serif';
+  font-weight: bold;
+  color: darken(variables.$black-color, 25%);
+  font-size: 1.25em;
+}
+
+input, label, textarea, button
+{
+  font-family: Montserrat, 'sans-serif';
+  font-size: 0.8em;
+  line-height: 0.8em;
+}

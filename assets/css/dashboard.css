@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: Montserrat, "sans-serif";
+  font-weight: normal;
+  color: #000;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-family: Montserrat, "sans-serif";
+  font-weight: bold;
+  color: #000;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: Montserrat, "sans-serif";
+  font-weight: bold;
+  color: black;
+  font-size: 1.25em;
+}
+
+input, label, textarea, button {
+  font-family: Montserrat, "sans-serif";
+  font-size: 0.8em;
+  line-height: 0.8em;
+}
+
+.main {
+  width: 100vw;
+  display: flex;
+  height: calc(100vh - 40px);
+}
+.main__sidebar {
+  width: 15%;
+  height: 100%;
+}
+.main__content {
+  height: 100%;
+  overflow-y: auto;
+  width: 85%;
+  justify-content: center;
+  display: flex;
+  padding-top: 65px;
+}
+.main__content--child {
+  width: 75%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.container__row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container__col {
+  width: 30%;
+}
+
+.mg-10 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pd-10 {
+  padding: 30px;
+}
+
+.box-shadow {
+  box-shadow: -3px -3px 31px -3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -3px -3px 31px -3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -3px -3px 31px -3px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=dashboard.css.map */

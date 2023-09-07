@@ -1,0 +1,24 @@
+@use '../../../assets/sass/base/base';
+@use '../../../assets/sass/base/typography';
+@use '../../../assets/sass/utils/variables';
+
+.vertical-menu {
+  height: 100%;
+  background-color: variables.$navbar-admin-color;
+}
+
+.vertical-menu a {
+  color: variables.$white-color;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  text-decoration: underline;
+}
+
+.vertical-menu a.active {
+  background-color: darken(variables.$white-color, 25%);
+  color: variables.$black-color;
+}

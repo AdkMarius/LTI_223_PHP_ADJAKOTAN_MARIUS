@@ -1,0 +1,56 @@
+@use '../base/base';
+@use '../utils/variables';
+@use '../base/typography';
+@use '../layout/form';
+@use '../utils/mixins';
+
+.main-menu {
+  padding: 0;
+  .login {
+    display: flex;
+    flex-direction: row;
+    &__left {
+      display: flex;
+      justify-content: center;
+      background-color: variables.$primary-colour;
+      width: 50%;
+      height: 100vh;
+    }
+    &__animation {
+      display: flex;
+      align-items: center;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-top: 20px;
+      width: 50%;
+      &--center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__form {
+      margin-top: 40px;
+      width: 50%;
+    }
+  }
+}
+
+button:disabled {
+  background-color: variables.$disabled-button-color;
+  cursor: not-allowed;
+  color: variables.$black-color;
+  border: none;
+}
+
+button:disabled:hover {
+  background-color: variables.$disabled-button-color;
+  cursor: not-allowed;
+  color: variables.$black-color;
+  border: none;
+}

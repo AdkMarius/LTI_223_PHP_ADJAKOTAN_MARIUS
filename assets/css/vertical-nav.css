@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: Montserrat, "sans-serif";
+  font-weight: normal;
+  color: #000;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-family: Montserrat, "sans-serif";
+  font-weight: bold;
+  color: #000;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: Montserrat, "sans-serif";
+  font-weight: bold;
+  color: black;
+  font-size: 1.25em;
+}
+
+input, label, textarea, button {
+  font-family: Montserrat, "sans-serif";
+  font-size: 0.8em;
+  line-height: 0.8em;
+}
+
+.vertical-menu {
+  height: 100%;
+  background-color: #1d2327;
+}
+
+.vertical-menu a {
+  color: #fff;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  text-decoration: underline;
+}
+
+.vertical-menu a.active {
+  background-color: #bfbfbf;
+  color: #000;
+}
+
+/*# sourceMappingURL=vertical-nav.css.map */
